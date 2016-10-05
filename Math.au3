@@ -7,6 +7,8 @@
 
 #include "Math\AutoItDefault.au3" ; Math UDF bundled with AutoIt
 
+#include "Math\Chebyshev.au3"
+
 #include "Math\Boole.au3"
 #include "Math\Combinatorics.au3"
 #include "Math\Complex.au3"

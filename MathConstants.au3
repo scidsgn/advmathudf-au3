@@ -1,7 +1,11 @@
 #include-once
 
-;
+; For checking whether we're using Advanced Math UDF or standard Math UDF
 Global Const $USE_ADVMATHUDF = 1
+
+; Integral()
+Global Enum $M_INTEGRATE_TRAPEZOID = 0, _
+			$M_INTEGRATE_SIMPSON
 
 ; Primality tests
 Global Enum $M_PRIME_NAIVE1 = 0, _

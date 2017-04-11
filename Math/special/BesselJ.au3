@@ -9,8 +9,10 @@ Func BesselJ1($x)
 EndFunc
 
 Func BesselJn($x, $n)
+	If ($n < 0) Then Return ((-1)^$n)*BesselJn($x, Abs($n))
+
 	Local $aParams = [Int($n), $x]
-	Local $intValue = Integral(_BesselJnIntegral, 0, $Pi, 0.001, $aParams)
+	Local $intValue = IntegralQuadpackQNG(_BesselJnIntegral, 0, $Pi, 0, 1e-4, $aParams)
 
 	Return (1/$Pi)*$intValue
 EndFunc

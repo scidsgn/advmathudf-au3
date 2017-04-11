@@ -60,3 +60,38 @@ EndFunc
 Func TransposeMatrix($Matrix)
 	Return _ArrayTranspose($Matrix)
 EndFunc
+
+Func RandomMatrix($iCols = 1, $iRows = 1, $fMin = 0, $fMax = 1, $iOptions = 0)
+	Local $aRet[$iCols][$iRows]
+	Local $x, $y
+
+	For $x = 0 To ($iCols-1)
+		For $y = 0 To ($iRows-1)
+			$aRet[$x][$y] = Random($fMin, $fMax, $iOptions)
+		Next
+	Next
+
+	Return $aRet
+EndFunc
+
+Func MatrixGetRow(ByRef $aMx, $iRow)
+	Local $aRet[UBound($aMx)]
+	Local $i
+
+	For $i = 0 To (UBound($aMx)-1)
+		$aRet[$i] = $aMx[$i][$iRow]
+	Next
+
+	Return $aRet
+EndFunc
+
+Func MatrixGetCol(ByRef $aMx, $iCol)
+	Local $aRet[UBound($aMx, 2)]
+	Local $i
+
+	For $i = 0 To (UBound($aMx, 2)-1)
+		$aRet[$i] = $aMx[$iCol][$i]
+	Next
+
+	Return $aRet
+EndFunc

@@ -11,7 +11,7 @@
 $aGraph = Graph(6)
 
 ; Graph indices are 0-based!
-; Since e don't take direction into accout,
+; Since it does not work with direction,
 ; $iFrom and $iTo can be swapped with no consequences.
 ; Links and their weights are taken from https://commons.wikimedia.org/wiki/File:Dijkstra_Animation.gif
 GraphAddLink($aGraph, 0, 1, 7)

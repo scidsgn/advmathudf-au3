@@ -1,5 +1,5 @@
 # Advanced Math UDF
-Advanced mathematical functions for using in AutoIt scripts
+Advanced mathematical functions for use in AutoIt scripts
 
 ## Features
 * Trigonometric and hyperbolic functions

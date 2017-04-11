@@ -7,7 +7,7 @@
 
 #include "Math\AutoItDefault.au3" ; Math UDF bundled with AutoIt
 
-#include "Math\Chebyshev.au3"
+#include "Math\Chebyshev.au3" ; Used for special function approximations
 
 #include "Math\Boole.au3"
 #include "Math\Combinatorics.au3"
@@ -19,6 +19,7 @@
 #include "Math\Interpolation.au3"
 #include "Math\Logarithms.au3"
 #include "Math\Matrices.au3"
+#include "Math\MatrixCellwise.au3"
 #include "Math\Means.au3"
 #include "Math\Misc.au3"
 #include "Math\Mollify.au3"
@@ -47,6 +48,7 @@
 #include "Math\Special\Gamma.au3"
 #include "Math\Special\Misc.au3"
 #include "Math\Special\Step.au3"
+#include "Math\Special\TrigIntegrals.au3"
 #include "Math\Special\Zeta.au3"
 
 #include "Math\Geometry\Point.au3"
@@ -61,6 +63,17 @@
 #include "Math\Graphs\Graph.au3"
 #include "Math\Graphs\Dijkstra.au3"
 
+#include "Math\Random\Random.au3"
+#include "Math\Random\LCG.au3"
+#include "Math\Random\Xorshift.au3"
+
+; QUADPACK port
+#include "Math\QUADPACK\util.au3"
+#include "Math\QUADPACK\qng.au3"
+#include "Math\QUADPACK\qk.au3"
+#include "Math\QUADPACK\qk15.au3"
+#include "Math\QUADPACK\qk21.au3"
+
 ; #INDEX# =======================================================================================================================
 ; Title .........: Advanced Math UDF
 ; UDF Version ...: 1.8.0
@@ -69,6 +82,8 @@
 ; Description ...: Advanced mathematical functions.
 ; Author(s) .....: scintilla4evr
 ; ===============================================================================================================================
+
+Global $__g_ADVMATHUDF_INTEGRALSTEP = 0.001
 
 ; #CURRENT# =====================================================================================================================
 ; BooleAnd
@@ -311,4 +326,32 @@
 ; LinearMollifier
 ; ConstantMollifier
 ; SharpMollifier
+;
+; ADDED WITH VERSION 1.8:
+; Si
+; Ci
+; Shi
+; Chi
+; RandomMatrix
+; Covariance
+; CentralMoment
+; Kurtosis
+; Skewness
+; CorrelationPCC
+; MatrixGetRow
+; MatrixGetCol
+; MatrixCellwisePower
+; MatrixCellwiseMultiply
+; DFT
+; IDFT
+; DFT2D
+; IDFT2D
+; DCT
+; IDCT
+; IntegralQuadpackQNG
+; IntegralQuadpackQK
+; IntegralQuadpackQK15
+; IntegralQuadpackQK21
+; RandomCreate
+; RandomNextValue
 ; ===============================================================================================================================
